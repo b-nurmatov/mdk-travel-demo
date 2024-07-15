@@ -1,0 +1,476 @@
+
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Место</title>
+  <link rel="icon" href="./favicon.svg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
+  <link href="https://fonts.googleapis.com/css2?family=Gabriela&amp;family=Raleway:ital,wght@0,100..900;1,100..900&amp;family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&amp;display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+  <link rel="stylesheet" href="css/styles.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<div class="topMenuPadding"></div>
+<div class="topMenu "><a class="topMenu-logo" href="index.html"></a>
+  <nav class="topMenu-nav">
+    <ul class="topMenu-navList">
+      <li class="topMenu-navItem"><a class="topMenu-navLink" href="tours.html">Туры</a></li>
+      <li class="topMenu-navItem"><a class="topMenu-navLink" href="hotels.html">Гостиницы</a></li>
+      <li class="topMenu-navItem"><a class="topMenu-navLink" href="text-page.html">Visa</a></li>
+      <li class="topMenu-navItem"><a class="topMenu-navLink" href="places.html">Места</a></li>
+      <li class="topMenu-navItem"><a class="topMenu-navLink" href="text-page.html">Об Узбекистане</a></li>
+      <li class="topMenu-navItem"><a class="topMenu-navLink" href="recommendations.html">Советы</a></li>
+      <li class="topMenu-navItem"><a class="topMenu-navLink" href="services.html">Услуги</a></li>
+      <li class="topMenu-navItem"><a class="topMenu-navLink" href="contacts.html">Контакты</a></li>
+    </ul>
+  </nav>
+  <div class="topMenu-actions"><a class="topMenu-searchButton" href="#"><i class="bi-search topMenu-searchButtonIcon"></i></a>
+    <div class="topMenu-lang">
+      <button class="topMenu-langButton"><i class="bi-translate topMenu-langButtonIcon"></i><span class="topMenu-langButtonText">Ru</span><i class="bi-caret-down-fill topMenu-langButtonArrow"></i></button>
+      <ul class="topMenu-langList">
+        <li class="topMenu-langItem"><a class="topMenu-langListLink" href="#">Ru</a></li>
+        <li class="topMenu-langItem"><a class="topMenu-langListLink" href="#">En</a></li>
+        <li class="topMenu-langItem"><a class="topMenu-langListLink" href="#">Uz</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="topMenu-toggle">
+    <input class="topMenu-toggleCheckbox" type="checkbox"/><i class="bi-list topMenu-toggleIcon"></i>
+  </div>
+</div>
+<main class="layout layout--sidebar--right">
+  <div class="layout-content">
+    <div class="slider" style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff">
+      <div class="swiper slider-head">
+        <div class="swiper-wrapper slider-wrapper">
+          <div class="swiper-slide slider-slide"><img class="slider-image" src="./content-media/sliderTour/01.webp"/></div>
+          <div class="swiper-slide slider-slide"><img class="slider-image" src="./content-media/sliderTour/02.webp"/></div>
+          <div class="swiper-slide slider-slide"><img class="slider-image" src="./content-media/sliderTour/03.webp"/></div>
+          <div class="swiper-slide slider-slide"><img class="slider-image" src="./content-media/sliderTour/04.webp"/></div>
+          <div class="swiper-slide slider-slide"><img class="slider-image" src="./content-media/sliderTour/05.webp"/></div>
+          <div class="swiper-slide slider-slide"><img class="slider-image" src="./content-media/sliderTour/06.webp"/></div>
+        </div>
+        <div class="slider-next"><i class="bi-arrow-right-short slider-arrowIcon"></i></div>
+        <div class="slider-prev"><i class="bi-arrow-left-short slider-arrowIcon"></i></div>
+      </div>
+      <div class="swiper slider-thumbs">
+        <div class="swiper-wrapper slider-thumbsWrapper">
+          <div class="swiper-slide slider-thumb">
+            <div class="slider-thumbImageWrapper"><img class="slider-thumbImage" src="./content-media/sliderTour/01.webp"/></div>
+          </div>
+          <div class="swiper-slide slider-thumb">
+            <div class="slider-thumbImageWrapper"><img class="slider-thumbImage" src="./content-media/sliderTour/02.webp"/></div>
+          </div>
+          <div class="swiper-slide slider-thumb">
+            <div class="slider-thumbImageWrapper"><img class="slider-thumbImage" src="./content-media/sliderTour/03.webp"/></div>
+          </div>
+          <div class="swiper-slide slider-thumb">
+            <div class="slider-thumbImageWrapper"><img class="slider-thumbImage" src="./content-media/sliderTour/04.webp"/></div>
+          </div>
+          <div class="swiper-slide slider-thumb">
+            <div class="slider-thumbImageWrapper"><img class="slider-thumbImage" src="./content-media/sliderTour/05.webp"/></div>
+          </div>
+          <div class="swiper-slide slider-thumb">
+            <div class="slider-thumbImageWrapper"><img class="slider-thumbImage" src="./content-media/sliderTour/06.webp"/></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      let sliderThumbs = new Swiper(".slider-thumbs", {
+        spaceBetween: 4,
+        slidesPerView: 5,
+        freeMode: true,
+        watchSlidesProgress: true,
+        autoHeight: true,
+        breakpoints: {
+          768: {
+           spaceBetween: 8
+          },
+          960: {
+           spaceBetween: 16
+          }
+        },
+      });
+      
+      let sliderHead = new Swiper(".slider-head", {
+       spaceBetween: 8,
+       autoHeight: true,
+       breakpoints: {
+        960: {
+          spaceBetween: 16
+        }
+       },
+       navigation: {
+         nextEl: ".slider-next",
+         prevEl: ".slider-prev",
+       },
+       thumbs: {
+         swiper: sliderThumbs,
+       }
+      });
+    </script>
+    <div class="blockDescription">
+      <div class="blockDescription-container">
+        <h1 class="blockDescription-title">Исторический маршрут через древние города</h1>
+        <p class="blockDescription-p">Откройте для себя удивительный Узбекистан с нашим авторским туром! Мы предлагаем уникальную возможность познакомиться с историей, культурой и природой древних городов.  Вы окунётесь в атмосферу Востока, насладитесь национальной кухней и познакомитесь с местным колоритом.</p>
+        <p class="blockDescription-p">Этот тур позволит вам окунуться в атмосферу трёх знаменитых городов Узбекистана и насладиться их уникальной архитектурой, культурой гостеприимства и неповторимой кухней. Вы увидите величественные памятники, такие как площадь Регистан в Самарканде и мавзолей Гур-Эмир, а также побываете в Шахрисабзе — малой родине Тамерлана. Программа тура включает посещение Бухары города с множеством мечетей, медресе и минаретов, а также исторического центра, включённого в список Всемирного наследия ЮНЕСКО. </p>
+        <p class="blockDescription-p">Во время путешествия вы узнаете множество интересных фактов и легенд, сделаете тысячи потрясающих фотографий и посетите торговый квартал крытых базаров XVI века.</p>
+        <p class="blockDescription-p">Мы организуем комфортное передвижение по стране, включая трансферы, проживание в уютных отелях и питание. Также мы предоставляем услуги гида, который расскажет вам об истории и культуре каждого города.</p>
+        <p class="blockDescription-p">Присоединяйтесь к нашему туру и откройте для себя настоящий Узбекистан!</p>
+      </div>
+    </div>
+    <div class="layout-cols--2">
+      <div class="blockTourProgram">
+        <div class="blockTourProgram-container">
+          <h2 class="blockTourProgram-title">Программа тура</h2>
+          <ul class="blockTourProgram-list">
+            <li class="blockTourProgram-item">
+              <div class="itemTourProg">
+                <div class="itemTourProg-day">
+                  <div class="itemTourProg-dayWrapper">
+                    <div class="itemTourProg-dayNumber">1</div>
+                  </div>
+                  <div class="itemTourProg-dayCaption">день</div>
+                </div>
+                <input class="itemTourProg-toggle" type="checkbox"/>
+                <div class="itemTourProg-head">
+                  <div class="itemTourProg-title">Встреча в Ташкенте. Экскурсия по городу</div>
+                  <div class="bi-caret-down-fill itemTourProg-arrow"></div>
+                </div>
+                <div class="itemTourProg-textWrapper">
+                  <p class="itemTourProg-text">И нет сомнений, что действия представителей оппозиции объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, активно развивающиеся страны третьего мира могут быть представлены в исключительно положительном свете. Предварительные выводы неутешительны: убеждённость некоторых оппонентов влечет за собой процесс внедрения и модернизации первоочередных требований.</p>
+                  <p class="itemTourProg-text">И нет сомнений, что действия представителей оппозиции объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, активно развивающиеся страны третьего мира могут быть представлены в исключительно положительном свете. Предварительные выводы неутешительны: убеждённость некоторых оппонентов влечет за собой процесс внедрения и модернизации первоочередных требований.</p>
+                </div>
+              </div>
+            </li>
+            <li class="blockTourProgram-item">
+              <div class="itemTourProg">
+                <div class="itemTourProg-day">
+                  <div class="itemTourProg-dayWrapper">
+                    <div class="itemTourProg-dayNumber">2</div>
+                  </div>
+                  <div class="itemTourProg-dayCaption">день</div>
+                </div>
+                <input class="itemTourProg-toggle" type="checkbox"/>
+                <div class="itemTourProg-head">
+                  <div class="itemTourProg-title">Ташкент - Самарканд</div>
+                  <div class="bi-caret-down-fill itemTourProg-arrow"></div>
+                </div>
+                <div class="itemTourProg-textWrapper">
+                  <p class="itemTourProg-text">И нет сомнений, что действия представителей оппозиции объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, активно развивающиеся страны третьего мира могут быть представлены в исключительно положительном свете. Предварительные выводы неутешительны: убеждённость некоторых оппонентов влечет за собой процесс внедрения и модернизации первоочередных требований.</p>
+                  <p class="itemTourProg-text">И нет сомнений, что действия представителей оппозиции объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, активно развивающиеся страны третьего мира могут быть представлены в исключительно положительном свете. Предварительные выводы неутешительны: убеждённость некоторых оппонентов влечет за собой процесс внедрения и модернизации первоочередных требований.</p>
+                </div>
+              </div>
+            </li>
+            <li class="blockTourProgram-item">
+              <div class="itemTourProg">
+                <div class="itemTourProg-day">
+                  <div class="itemTourProg-dayWrapper">
+                    <div class="itemTourProg-dayNumber">3</div>
+                  </div>
+                  <div class="itemTourProg-dayCaption">день</div>
+                </div>
+                <input class="itemTourProg-toggle" type="checkbox"/>
+                <div class="itemTourProg-head">
+                  <div class="itemTourProg-title">Самарканд - Шахрисабз — Самарканд</div>
+                  <div class="bi-caret-down-fill itemTourProg-arrow"></div>
+                </div>
+                <div class="itemTourProg-textWrapper">
+                  <p class="itemTourProg-text">И нет сомнений, что действия представителей оппозиции объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, активно развивающиеся страны третьего мира могут быть представлены в исключительно положительном свете. Предварительные выводы неутешительны: убеждённость некоторых оппонентов влечет за собой процесс внедрения и модернизации первоочередных требований.</p>
+                  <p class="itemTourProg-text">И нет сомнений, что действия представителей оппозиции объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, активно развивающиеся страны третьего мира могут быть представлены в исключительно положительном свете. Предварительные выводы неутешительны: убеждённость некоторых оппонентов влечет за собой процесс внедрения и модернизации первоочередных требований.</p>
+                </div>
+              </div>
+            </li>
+            <li class="blockTourProgram-item">
+              <div class="itemTourProg">
+                <div class="itemTourProg-day">
+                  <div class="itemTourProg-dayWrapper">
+                    <div class="itemTourProg-dayNumber">4</div>
+                  </div>
+                  <div class="itemTourProg-dayCaption">день</div>
+                </div>
+                <input class="itemTourProg-toggle" type="checkbox"/>
+                <div class="itemTourProg-head">
+                  <div class="itemTourProg-title">Самарканд - Бухара</div>
+                  <div class="bi-caret-down-fill itemTourProg-arrow"></div>
+                </div>
+                <div class="itemTourProg-textWrapper">
+                  <p class="itemTourProg-text">И нет сомнений, что действия представителей оппозиции объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, активно развивающиеся страны третьего мира могут быть представлены в исключительно положительном свете. Предварительные выводы неутешительны: убеждённость некоторых оппонентов влечет за собой процесс внедрения и модернизации первоочередных требований.</p>
+                  <p class="itemTourProg-text">И нет сомнений, что действия представителей оппозиции объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, активно развивающиеся страны третьего мира могут быть представлены в исключительно положительном свете. Предварительные выводы неутешительны: убеждённость некоторых оппонентов влечет за собой процесс внедрения и модернизации первоочередных требований.</p>
+                </div>
+              </div>
+            </li>
+            <li class="blockTourProgram-item">
+              <div class="itemTourProg">
+                <div class="itemTourProg-day">
+                  <div class="itemTourProg-dayWrapper">
+                    <div class="itemTourProg-dayNumber">5</div>
+                  </div>
+                  <div class="itemTourProg-dayCaption">день</div>
+                </div>
+                <input class="itemTourProg-toggle" type="checkbox"/>
+                <div class="itemTourProg-head">
+                  <div class="itemTourProg-title">Бухара</div>
+                  <div class="bi-caret-down-fill itemTourProg-arrow"></div>
+                </div>
+                <div class="itemTourProg-textWrapper">
+                  <p class="itemTourProg-text">И нет сомнений, что действия представителей оппозиции объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, активно развивающиеся страны третьего мира могут быть представлены в исключительно положительном свете. Предварительные выводы неутешительны: убеждённость некоторых оппонентов влечет за собой процесс внедрения и модернизации первоочередных требований.</p>
+                  <p class="itemTourProg-text">И нет сомнений, что действия представителей оппозиции объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, активно развивающиеся страны третьего мира могут быть представлены в исключительно положительном свете. Предварительные выводы неутешительны: убеждённость некоторых оппонентов влечет за собой процесс внедрения и модернизации первоочередных требований.</p>
+                </div>
+              </div>
+            </li>
+            <li class="blockTourProgram-item">
+              <div class="itemTourProg">
+                <div class="itemTourProg-day">
+                  <div class="itemTourProg-dayWrapper">
+                    <div class="itemTourProg-dayNumber">6</div>
+                  </div>
+                  <div class="itemTourProg-dayCaption">день</div>
+                </div>
+                <input class="itemTourProg-toggle" type="checkbox"/>
+                <div class="itemTourProg-head">
+                  <div class="itemTourProg-title">Бухара - Ташкент</div>
+                  <div class="bi-caret-down-fill itemTourProg-arrow"></div>
+                </div>
+                <div class="itemTourProg-textWrapper">
+                  <p class="itemTourProg-text">И нет сомнений, что действия представителей оппозиции объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, активно развивающиеся страны третьего мира могут быть представлены в исключительно положительном свете. Предварительные выводы неутешительны: убеждённость некоторых оппонентов влечет за собой процесс внедрения и модернизации первоочередных требований.</p>
+                  <p class="itemTourProg-text">И нет сомнений, что действия представителей оппозиции объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, активно развивающиеся страны третьего мира могут быть представлены в исключительно положительном свете. Предварительные выводы неутешительны: убеждённость некоторых оппонентов влечет за собой процесс внедрения и модернизации первоочередных требований.</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="blockTourFeatures">
+        <div class="blockTourFeatures-container">
+          <h2 class="blockTourFeatures-title">Особенности тура</h2>
+          <ul class="blockTourFeatures-list">
+            <li class="blockTourFeatures-item">
+              <div class="item">
+                <div class="item-iconWrapper"><i class="bi-arrow-right-short item-icon"></i></div>
+                <p class="item-text">Экскурсия по Ташкенту, включая посещение Комплекса Хазрет-Имам (включая мечеть Хазрет-Имам, медресе Барак-Хан, мавзолей Кафал-Шоши и Корана Отмелик-Таш), а также Крепости Кукельдаш и Базар Чорсу.</p>
+              </div>
+            </li>
+            <li class="blockTourFeatures-item">
+              <div class="item">
+                <div class="item-iconWrapper"><i class="bi-arrow-right-short item-icon"></i></div>
+                <p class="item-text">Экскурсия по Самарканду, включая посещение Гури-Амира Мавзолея, Соборной Мечети, Улугбековой Обсерватории, Мавзолея Шахи-Зинды и Регистана.</p>
+              </div>
+            </li>
+            <li class="blockTourFeatures-item">
+              <div class="item">
+                <div class="item-iconWrapper"><i class="bi-arrow-right-short item-icon"></i></div>
+                <p class="item-text">В Шахрисабзе, родном городе Тимура, посетим комплекса Дорус-Саодат, Хазрет-Имам Мечети и Мавзолея Джахангира.</p>
+              </div>
+            </li>
+            <li class="blockTourFeatures-item">
+              <div class="item">
+                <div class="item-iconWrapper"><i class="bi-arrow-right-short item-icon"></i></div>
+                <p class="item-text">Полный день экскурсий по Бухаре, включая посещение Комплекса Пои-Калон (включая мечеть Калон, медресе Мири-Араб, калон Минарет), Лаби-Хауз Комплекс, Саманидов Мавзолей, Чашме Аюб Мечеть и Арк Крепость.</p>
+              </div>
+            </li>
+            <li class="blockTourFeatures-item">
+              <div class="item">
+                <div class="item-iconWrapper"><i class="bi-arrow-right-short item-icon"></i></div>
+                <p class="item-text">Все услуги, включая трансферы, сопровождение гида, питание и проживание отеля - включены в стоимость.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="layout-rightSidebar">
+    <section class="blockSummary">
+      <div class="blockSummary-container">
+        <ul class="blockSummary-list">
+          <li class="blockSummary-item">
+            <div class="itemExtra">
+              <div class="itemExtra-iconWrapper"><i class="bi-bookmarks itemExtra-icon"></i></div>
+              <p class="itemExtra-textWrapper"><span class="itemExtra-title">Тема тура:</span><a class="itemExtra-link" href="#">История</a>
+              </p>
+            </div>
+          </li>
+          <li class="blockSummary-item">
+            <div class="itemExtra">
+              <div class="itemExtra-iconWrapper"><i class="bi-clock itemExtra-icon"></i></div>
+              <p class="itemExtra-textWrapper"><span class="itemExtra-title">Длительность:</span><span class="itemExtra-text">8 дней</span>
+              </p>
+            </div>
+          </li>
+          <li class="blockSummary-item">
+            <div class="itemExtra">
+              <div class="itemExtra-iconWrapper"><i class="bi-signpost-split itemExtra-icon"></i></div>
+              <p class="itemExtra-textWrapper"><span class="itemExtra-title">Маршрут:</span><span class="itemExtra-text">Ташкент, Самарканд, Бухара</span>
+              </p>
+            </div>
+          </li>
+          <li class="blockSummary-item">
+            <div class="itemExtra">
+              <div class="itemExtra-iconWrapper"><i class="bi-person-walking itemExtra-icon"></i></div>
+              <p class="itemExtra-textWrapper"><span class="itemExtra-title">Сложность</span><span class="itemExtra-text">Легко</span>
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="blockTourPrices">
+      <div class="blockTourPrices-container">
+        <h2 class="blockTourPrices-title">Стоимость</h2>
+        <table class="table">
+          <thead class="table-thead">
+            <tr class="table-tr">
+              <td class="table-td">Кол-во персон</td>
+              <td class="table-td table-td--align--right"><span class="table-stars table-stars--align--right"><i class="bi-star-fill table-star"></i><i class="bi-star-fill table-star"></i><i class="bi-star-fill table-star"></i></span><span>отель</span></td>
+              <td class="table-td table-td--align--right"><span class="table-stars table-stars--align--right"><i class="bi-star-fill table-star"></i><i class="bi-star-fill table-star"></i><i class="bi-star-fill table-star"></i><i class="bi-star-fill table-star"></i></span><span>отель</span></td>
+              <td class="table-td table-td--align--right"><span class="table-stars table-stars--align--right"><i class="bi-star-fill table-star"></i><i class="bi-star-fill table-star"></i><i class="bi-star-fill table-star"></i><i class="bi-star-fill table-star"></i><i class="bi-star-fill table-star"></i></span><span>отель</span></td>
+            </tr>
+          </thead>
+          <tbody class="table-tbody">
+            <tr class="table-tr">
+              <td class="table-td">1</td>
+              <td class="table-td table-td--align--right">150 $</td>
+              <td class="table-td table-td--align--right">150 $</td>
+              <td class="table-td table-td--align--right">150 $</td>
+            </tr>
+            <tr class="table-tr">
+              <td class="table-td">2</td>
+              <td class="table-td table-td--align--right">150 $</td>
+              <td class="table-td table-td--align--right">150 $</td>
+              <td class="table-td table-td--align--right">150 $</td>
+            </tr>
+            <tr class="table-tr">
+              <td class="table-td">4</td>
+              <td class="table-td table-td--align--right">150 $</td>
+              <td class="table-td table-td--align--right">150 $</td>
+              <td class="table-td table-td--align--right">150 $</td>
+            </tr>
+            <tr class="table-tr">
+              <td class="table-td">6</td>
+              <td class="table-td table-td--align--right">150 $</td>
+              <td class="table-td table-td--align--right">150 $</td>
+              <td class="table-td table-td--align--right">150 $</td>
+            </tr>
+            <tr class="table-tr">
+              <td class="table-td">8</td>
+              <td class="table-td table-td--align--right">150 $</td>
+              <td class="table-td table-td--align--right">150 $</td>
+              <td class="table-td table-td--align--right">150 $</td>
+            </tr>
+            <tr class="table-tr">
+              <td class="table-td">10</td>
+              <td class="table-td table-td--align--right">150 $</td>
+              <td class="table-td table-td--align--right">150 $</td>
+              <td class="table-td table-td--align--right">150 $</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <div class="blockBookButton">
+      <div class="blockBookButton-container"><a class="blockBookButton-button" href="#">Забронировать тур</a></div>
+    </div>
+    <div class="blockTourHotels">
+      <div class="blockTourHotels-container">
+        <h2 class="blockTourHotels-title">Отели</h2>
+        <table class="table">
+          <thead class="table-thead">
+            <tr class="table-tr">
+              <td class="table-td">Город</td>
+              <td class="table-td">Отель</td>
+              <td class="table-td table-td--align--right">Кол-во ночей</td>
+            </tr>
+          </thead>
+          <tbody class="table-tbody">
+            <tr class="table-tr">
+              <td class="table-td" rowspan="2">Ташкент</td>
+              <td class="table-td"><span class="table-stars"><i class="bi-star-fill table-star"></i><i class="bi-star-fill table-star"></i><i class="bi-star-fill table-star"></i></span><span>Uzbekistan, Shodlik Palace</span></td>
+              <td class="table-td table-td--align--right" rowspan="2">1</td>
+            </tr>
+            <tr class="table-tr">
+              <td class="table-td"><span class="table-stars"><i class="bi-star-fill table-star"></i><i class="bi-star-fill table-star"></i><i class="bi-star-fill table-star"></i><i class="bi-star-fill table-star"></i><i class="bi-star-fill table-star"></i></span><span>Lotte City Hotel, Miran International</span></td>
+            </tr>
+            <tr class="table-tr">
+              <td class="table-td" rowspan="2">Самарканд</td>
+              <td class="table-td"><span class="table-stars"><i class="bi-star-fill table-star"></i><i class="bi-star-fill table-star"></i><i class="bi-star-fill table-star"></i></span><span>Uzbekistan, Shodlik Palace</span></td>
+              <td class="table-td table-td--align--right" rowspan="2">3</td>
+            </tr>
+            <tr class="table-tr">
+              <td class="table-td"><span class="table-stars"><i class="bi-star-fill table-star"></i><i class="bi-star-fill table-star"></i><i class="bi-star-fill table-star"></i><i class="bi-star-fill table-star"></i><i class="bi-star-fill table-star"></i></span><span>Lotte City Hotel, Miran International</span></td>
+            </tr>
+            <tr class="table-tr">
+              <td class="table-td" rowspan="2">Ташкент</td>
+              <td class="table-td"><span class="table-stars"><i class="bi-star-fill table-star"></i><i class="bi-star-fill table-star"></i><i class="bi-star-fill table-star"></i></span><span>Uzbekistan, Shodlik Palace</span></td>
+              <td class="table-td table-td--align--right" rowspan="2">2</td>
+            </tr>
+            <tr class="table-tr">
+              <td class="table-td"><span class="table-stars"><i class="bi-star-fill table-star"></i><i class="bi-star-fill table-star"></i><i class="bi-star-fill table-star"></i><i class="bi-star-fill table-star"></i><i class="bi-star-fill table-star"></i></span><span>Lotte City Hotel, Miran International</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="blockTourServices">
+      <div class="blockTourServices-container">
+        <h2 class="blockTourServices-title">Включённые услуги</h2>
+        <ul class="blockTourServices-list">
+          <li class="blockTourServices-item">
+            <div class="item">
+              <div class="item-iconWrapper"><i class="bi-arrow-right-short item-icon"></i></div>
+              <p class="item-text">Помощь с оформлением документов.</p>
+            </div>
+          </li>
+          <li class="blockTourServices-item">
+            <div class="item">
+              <div class="item-iconWrapper"><i class="bi-arrow-right-short item-icon"></i></div>
+              <p class="item-text">Комфортабельный транспорт (тип транспортного средства зависит от размера группы).</p>
+            </div>
+          </li>
+          <li class="blockTourServices-item">
+            <div class="item">
+              <div class="item-iconWrapper"><i class="bi-arrow-right-short item-icon"></i></div>
+              <p class="item-text">Гид</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</main>
+<footer class="footer">
+  <div class="footer-picture"></div>
+  <div class="footer-container">
+    <div class="footer-contacts">
+      <div class="footer-contact">
+        <div class="footer-contactTitle">Адрес</div><a class="footer-contactText" href="#">г. Ташкент, ул. Улица, 28</a>
+      </div>
+      <div class="footer-contact">
+        <div class="footer-contactTitle">Телефон</div><a class="footer-contactText" href="#">+998 71 555 55 55</a>
+      </div>
+      <div class="footer-contact">
+        <div class="footer-contactTitle">E-mail</div><a class="footer-contactText" href="#">mail@mail.com</a>
+      </div>
+      <div class="footer-contact">
+        <div class="footer-contactTitle">График работы</div>
+        <div class="footer-contactText">Пн-пт, 09:00-18:00</div>
+      </div>
+    </div>
+    <div class="footer-social"><a class="footer-socialLink" href="#" title="Telegram"><i class="bi-telegram footer-socialLinkIcon"></i></a><a class="footer-socialLink" href="#" title="Instagram"><i class="bi-instagram footer-socialLinkIcon"></i></a><a class="footer-socialLink" href="#" title="Facebook"><i class="bi-facebook footer-socialLinkIcon"></i></a></div>
+    <div class="footer-nav">
+      <div class="footer-navItem"><i class="bi-arrow-right-short footer-navItemIcon"></i><a class="footer-navLink" href="tours.html">Туры</a></div>
+      <div class="footer-navItem"><i class="bi-arrow-right-short footer-navItemIcon"></i><a class="footer-navLink" href="places.html">Места</a></div>
+      <div class="footer-navItem"><i class="bi-arrow-right-short footer-navItemIcon"></i><a class="footer-navLink" href="services.html">Услуги</a></div>
+      <div class="footer-navItem"><i class="bi-arrow-right-short footer-navItemIcon"></i><a class="footer-navLink" href="hotels.html">Гостиницы</a></div>
+      <div class="footer-navItem"><i class="bi-arrow-right-short footer-navItemIcon"></i><a class="footer-navLink" href="text-page.html">Об Узбекистане</a></div>
+      <div class="footer-navItem"><i class="bi-arrow-right-short footer-navItemIcon"></i><a class="footer-navLink" href="contacts.html">Контакты</a></div>
+      <div class="footer-navItem"><i class="bi-arrow-right-short footer-navItemIcon"></i><a class="footer-navLink" href="text-page.html">Visa</a></div>
+      <div class="footer-navItem"><i class="bi-arrow-right-short footer-navItemIcon"></i><a class="footer-navLink" href="recommendations.html">Советы</a></div>
+    </div>
+    <p class="footer-copyrights"><span>Copyright © 2024 </span><br/><span>MKD Travel</span></p>
+  </div>
+</footer>
+<script src="/js/scripts.min.js"></script>
